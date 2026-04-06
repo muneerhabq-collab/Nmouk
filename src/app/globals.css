@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 37 43% 97%; /* #fbf8f3 */
+    --foreground: 155 30% 10%;
+    --card: 37 43% 98%;
+    --card-foreground: 155 30% 10%;
+    --popover: 37 43% 97%;
+    --popover-foreground: 155 30% 10%;
+    --primary: 155 50% 19%; /* #194b35 */
+    --primary-foreground: 37 43% 97%;
+    --secondary: 155 10% 90%;
+    --secondary-foreground: 155 50% 19%;
+    --muted: 155 10% 94%;
+    --muted-foreground: 0 0% 31%; /* #4f4f4f */
+    --accent: 0 0% 31%; /* #4f4f4f */
+    --accent-foreground: 37 43% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 37 43% 97%;
+    --border: 155 20% 88%;
+    --input: 155 20% 88%;
+    --ring: 155 50% 19%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline font-bold;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.chat-bubble-user {
+  @apply bg-primary text-primary-foreground rounded-2xl rounded-tr-none py-3 px-4;
+}
+
+.chat-bubble-ai {
+  @apply bg-white border border-border rounded-2xl rounded-tl-none py-3 px-4 shadow-sm;
+}
